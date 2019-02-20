@@ -1,0 +1,54 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega16A"</DEVICE>
+ <WORKING_DIR>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m16Adef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\Debug/snakev1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>snakev1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>snakev1.map</FILE>
+  <FILE>snakev1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INIT><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>29</LINE></INIT>
+  <FDISP><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>74</LINE></FDISP>
+  <INCEN><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>212</LINE></INCEN>
+  <INCEN2><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>214</LINE></INCEN2>
+  <SPI_INIT><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>62</LINE></SPI_INIT>
+  <PROG><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>69</LINE></PROG>
+  <GO><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>78</LINE></GO>
+  <ZERO2><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>89</LINE></ZERO2>
+  <LOAD><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>96</LINE></LOAD>
+  <LIGHTDISP><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>147</LINE></LIGHTDISP>
+  <DONE><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>100</LINE></DONE>
+  <TDISP><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>102</LINE></TDISP>
+  <ZERO><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>114</LINE></ZERO>
+  <FORT><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>119</LINE></FORT>
+  <SDISP><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>124</LINE></SDISP>
+  <FORTS><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>136</LINE></FORTS>
+  <ONE><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>132</LINE></ONE>
+  <FIDISP><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>138</LINE></FIDISP>
+  <LATCH><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>159</LINE></LATCH>
+  <BLUE><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>174</LINE></BLUE>
+  <GREEN><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>169</LINE></GREEN>
+  <RED><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>164</LINE></RED>
+  <ANOD><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>154</LINE></ANOD>
+  <SPI_SEND><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>180</LINE></SPI_SEND>
+  <WAIT><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>182</LINE></WAIT>
+  <END><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>187</LINE></END>
+  <CLEAR_OLD><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>193</LINE></CLEAR_OLD>
+  <LOOP><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>201</LINE></LOOP>
+  <L1><FILE>\\ad.liu.se\home\felst140\Documents\Atmel Studio\6.2\snakev1\snakev1\snakev1.asm</FILE><LINE>205</LINE></L1>
+ </LABELS>
+</ASSEMBLER_INFO>
