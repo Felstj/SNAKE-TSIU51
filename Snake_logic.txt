@@ -1,0 +1,171 @@
+.dseg
+.org 200
+SnakeBody:
+	.byte 256
+
+	.def length = r19
+	.def direction = r21
+	.def death = r17
+
+.cseg
+
+.org	0
+jmp		COLD
+.org	INT0addr
+jmp		UPDATE_FRAME
+
+
+
+
+	COLD:
+	ldi r16, HIGH(RAMEND)
+	out SPH, r16
+
+	ldi r16, LOW(RAMEND)
+	out SPL, r16
+
+
+	ldi		r16, (1<<ISC01) | (0<<ISC00)
+	out		MCUCR, r16
+
+	ldi		r16,(1<<INT0) 
+	out		GICR, r16
+
+
+	; Enable global interrupts
+sei
+
+Call INIT
+
+WAIT_INPUT:
+	jmp WAIT_INPUT
+
+UPDATE_FRAME:	; spara SREG
+	push r16
+	in r16,SREG	
+	push r16
+	call POINT_RESET
+	call MOVE_HEAD
+	push r25
+	clr r25
+	call MOVE_BODY
+	pop r25
+	push r25
+	clr r25
+	clr r20
+	call HIT_BODY
+	pop r25
+	jmp UPDATE_COMPLETE
+
+MOVE_HEAD:
+	clr r20
+	add r20, r16
+	cpi direction, 0
+	breq MOVE_RIGHT
+	
+	cpi direction, 1
+	breq MOVE_DOWN
+	
+	cpi direction, 2
+	breq MOVE_LEFT
+	
+	cpi direction, 3
+	breq MOVE_UP
+	MOVE_RIGHT:
+		; CHECK BORDER
+		mov r23, r16
+		andi r23, $F0
+		cpi r23, $F0
+		breq IS_DEAD
+		;MOVE HEAD
+		push r18
+		ldi r18, $10
+		add r16, r18
+		st Z+, r16
+		pop r18
+		ret
+	MOVE_DOWN:
+		;CHECK BORDER
+		mov r23, r16
+		andi r23, $0F
+		cpi r23, $00
+		breq IS_DEAD
+		;MOVE HEAD
+		dec r16
+		st Z+, r16
+		ret
+	MOVE_LEFT:
+		;CHECK BORDER
+		mov r23, r16
+		andi r23, $F0
+		cpi r23, $00
+		breq IS_DEAD
+		;MOVE HEAD
+		push r18
+		ldi r18, $10
+		sub r16, r18
+		st Z+, r16
+		pop r18
+		ret
+	MOVE_UP:
+		;CHECK BORDER
+		mov r23, r16
+		andi r23, $0F
+		cpi r23, $0F
+		breq IS_DEAD
+		;MOVE HEAD
+		inc r16
+		st Z+, r16
+		ret
+
+MOVE_BODY:
+	cp length, r25
+	breq DONE
+	inc r25
+	ld r16, Z
+	st Z+, r20
+	mov r20,r16
+	jmp MOVE_BODY
+	DONE:
+		ret
+HIT_BODY:
+	call POINT_RESET
+	mov r20, r16
+	ld R0, Z+
+		LOOP:
+			cp length, r25
+			breq DONE
+			ld r16, Z+
+			inc r25
+			cp r16, r20
+			breq IS_DEAD
+			jmp LOOP
+IS_DEAD:
+	 ldi death, $01
+	 jmp IS_DEAD
+
+	
+
+
+		
+UPDATE_COMPLETE:
+	inc length
+	pop r16
+	out SREG,r16	
+	pop r16
+	reti
+
+POINT_RESET:
+	ldi r30, low(SnakeBody)
+	ldi r31, high(SnakeBody)
+	ld r16, Z
+	ret
+
+
+INIT:
+clr r16
+
+ldi direction, 0
+clr r20
+clr length
+ret
